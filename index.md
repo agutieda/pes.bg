@@ -1,3 +1,8 @@
+# Métodos de Simulación Dinámica
+# Programa de Estudios Superiores
+# Banco de Guatemala
+# 2018
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/agutieda/pes.bg/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
