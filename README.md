@@ -1,8 +1,4 @@
 # Programación II
-## Programa de Estudios SUperiores 
+# Programa de Estudios SUperiores 
 ## Banco de Guatemala
-## 2020
-
-# Introducción
-- Slides de la introducción
-- Archivo de prueba de Python
+### 2020
