@@ -228,9 +228,6 @@ Podemos ingresar formulas utilizando la syntaxis de TeX
 ```tex
 $ax^2+bc+c$
 ```
-```tex
-$$ \max_{{ \lbrace C_{t} \rbrace}_{t=0}^{\infty}} E_{0} \sum_{t=0}^{\infty} U(C_t) $$
-```
 
 ---
 
