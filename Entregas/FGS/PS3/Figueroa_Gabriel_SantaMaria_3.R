@@ -66,7 +66,7 @@ y0=rnorm(1,mean=theta0[1]/(1-theta0[2]),sd=sqrt(theta0[3]/(1-(theta0[2])^2)))
 epsilon = rnorm(nT,mean=0,sd=sqrt(theta0[3]))
 y =simualar_AR1(theta0[1],theta0[2],y0,nT,epsilon)
 p0 = c(0.5,0.5,0.5)
-OPTIMO = optim(P0, Log_L, control=list(fnscale=-1),hessian=TRUE)
+OPTIMO = optim(p0, Log_L, control=list(fnscale=-1),hessian=TRUE)
 OPTIMO
 
 #Problema 4 ----------------------------------------------------------
@@ -79,10 +79,10 @@ HESSIAN = matrix(c(0,0,0,0,0,0,0,0,0),ncol=3,nrow = 3)
 for (i in 1:1000){
     epsilon = rnorm(nT,mean=0,sd=sqrt(theta0[3]))
     nT = 100
-    P0 = c(0.5,0.5,0.5)
+    p0 = c(0.5,0.5,0.5)
     y0=rnorm(1,mean=theta0[1]/(1-theta0[2]),sd=sqrt(theta0[3]/(1-(theta0[2])^2)))
     y =simualar_AR1(theta0[1],theta0[2],y0,nT,epsilon)
-    OPTIMO = optim(P0, Log_L, control=list(fnscale=-1),hessian=TRUE)
+    OPTIMO = optim(p0, Log_L, control=list(fnscale=-1),hessian=TRUE)
     Estimador = OPTIMO$par
     MU = c(MU,Estimador[1]) 
     RHO = c(RHO,Estimador[2])
