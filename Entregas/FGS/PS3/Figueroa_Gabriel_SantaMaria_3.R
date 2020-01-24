@@ -59,14 +59,13 @@ y =simualar_AR1(theta0[1],theta0[2],y0,nT,epsilon)
 
 
 #Problema 3 --------------------------------------------------------
-#definimos una funcion auxiliar para la optimizacion
 nT = 100
 set.seed(5)
 y0=rnorm(1,mean=theta0[1]/(1-theta0[2]),sd=sqrt(theta0[3]/(1-(theta0[2])^2)))
 epsilon = rnorm(nT,mean=0,sd=sqrt(theta0[3]))
 y =simualar_AR1(theta0[1],theta0[2],y0,nT,epsilon)
 p0 = c(0.5,0.5,0.5)
-OPTIMO = optim(p0, Log_L, control=list(fnscale=-1),hessian=TRUE)
+OPTIMO = optim(p0,Log_L,control = list(fnscale=-1),lower = c(-Inf,-0.99999,0.00001),upper = c(Inf,0.99999,Inf),method="L-BFGS-B",hessian=TRUE)
 OPTIMO
 
 #Problema 4 ----------------------------------------------------------
@@ -82,7 +81,7 @@ for (i in 1:1000){
     p0 = c(0.5,0.5,0.5)
     y0=rnorm(1,mean=theta0[1]/(1-theta0[2]),sd=sqrt(theta0[3]/(1-(theta0[2])^2)))
     y =simualar_AR1(theta0[1],theta0[2],y0,nT,epsilon)
-    OPTIMO = optim(p0, Log_L, control=list(fnscale=-1),hessian=TRUE)
+    OPTIMO = optim(p0,Log_L,control = list(fnscale=-1),lower = c(-Inf,-0.99999,0.00001),upper = c(Inf,0.99999,Inf),method="L-BFGS-B",hessian=TRUE)
     Estimador = OPTIMO$par
     MU = c(MU,Estimador[1]) 
     RHO = c(RHO,Estimador[2])
@@ -99,7 +98,7 @@ mean(SIGMA2);sqrt(var(SIGMA2))
 
 #Problema 1
 errores = function(p0){
-    OPTIMO = optim(p0,Log_L,control=list(fnscale=-1),hessian=TRUE)
+    OPTIMO = optim(p0,Log_L,control = list(fnscale=-1),lower = c(-Inf,-0.99999,0.00001),upper = c(Inf,0.99999,Inf),method="L-BFGS-B",hessian=TRUE)
     hessiana = OPTIMO$hessian
     Q = -hessiana/nT
     P = solve(Q)
@@ -123,6 +122,6 @@ y0 = inflacion$inflacion[1]
 y = inflacion$inflacion
 
 
-optim(p0,Log_L,control=list(fnscale=-1),hessian=TRUE)$par
+optim(p0,Log_L,control = list(fnscale=-1),lower = c(-Inf,-0.99999,0.00001),upper = c(Inf,0.99999,Inf),method="L-BFGS-B",hessian=TRUE)$par
 errores(p0)
 
