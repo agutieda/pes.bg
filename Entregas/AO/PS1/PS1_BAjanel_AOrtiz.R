@@ -128,6 +128,8 @@ setwd("C:/Users/Andres/Desktop/Programacion II/Problemsets/PS1")
 datosCPI  <- read_excel("CPI.xlsx") 
 datosCPI
 
+
+
 # 2) Cree una variable inflacion.mensual que contenga la inflacion mensual de 
 #    Guatemala calculada usando los datos del punto anterior.
 
@@ -199,7 +201,3 @@ return inflacion.trimultimo.mes
 #    2. Modelo VEC
 #    3. Paquetes relacionados al inventario
 #    4. Simulación Montecarlo  
-
-
-
-

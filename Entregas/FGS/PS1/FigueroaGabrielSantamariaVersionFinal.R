@@ -176,6 +176,3 @@ lines(inflacion.trimestral.findemes, type = "l", col = "green")
 # Pablo: econometria en R y Python 
 #
 #
-
-
-
