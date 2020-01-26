@@ -168,5 +168,3 @@ Estimador_optimo
 
 errores_y_sim = erroresEst(ThetaIni,y_inflacion,y0)
 errores_y_sim 
-
-

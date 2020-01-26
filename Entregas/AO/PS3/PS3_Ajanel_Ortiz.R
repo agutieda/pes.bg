@@ -166,11 +166,3 @@ Opt_Inflacion=optim(Theta_Inic, Log_Vero, control=list(fnscale=-1))
 Opt_Inflacion
 
 ErroresSTD(Theta_Inic) 
-
-
-
-
-
-
-
-    

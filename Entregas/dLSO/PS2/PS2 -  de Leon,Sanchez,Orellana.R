@@ -231,4 +231,3 @@ funcionn<-function(p){
 
 funcionn(0.5)
 optimize(funcionn,c(0,1))
-

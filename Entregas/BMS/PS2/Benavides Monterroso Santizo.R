@@ -250,4 +250,3 @@ res = optimize(maxi,c(0,1))
 
 res$minimum # Devuelve la probabilidad de jugar a la ofensiva
 #que maximiza la probabilidad de que Frank gane el partido
-
