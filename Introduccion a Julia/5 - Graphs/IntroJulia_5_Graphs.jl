@@ -1,4 +1,4 @@
-# Introduccion a R: 
+# Introduccion a Julia: 
 # Parte 5) Graficas
 #
 # Angelo Gutierrez Daza
