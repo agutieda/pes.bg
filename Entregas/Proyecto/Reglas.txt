@@ -1,6 +1,0 @@
-#reglas categoricas
-SEXO %in% c("MUJER","HOMBRE")
-
-# reglas mixtas
-if ( PPA02 > 1 ) SEXO == "MUJER"
-if ( PPA02 > 0 && PPA02 < 2 ) SEXO == "HOMBRE"
