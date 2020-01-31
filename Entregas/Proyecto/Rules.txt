@@ -1,0 +1,4 @@
+# reglas numericas
+#PPA04C >= 1939
+# reglas mixtas
+if ( PPA02 >= 2 ) SEXO == "MUJER"
